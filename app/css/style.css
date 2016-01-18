@@ -16,6 +16,10 @@ header{
 	height: 120px;
 	margin-bottom: 40px;
 }
+.clear{
+	clear: both;
+}
+
 .container{
 	margin: 0 auto;
 	width: 960px;
@@ -121,17 +125,29 @@ header{
  .left-sidebar .left-menu ul li:first-child a:hover{
   	color: #fbfcfd;
   }
+
   .left-sidebar .contact-info{
   	background-color: #3ba8c0;
   	color:#fbfcfd;
   	border-radius: 5px;
   }
+
   .left-sidebar .contact-info h3{
   	padding: 10px 0px 10px 20px;
   }
+
   .left-sidebar .contact-info ul{
   	list-style: none;
-  	padding: 
+  	padding: 0px 0px 0px 40px;
+  }
+
+  .left-sidebar .contact-info li{
+  	padding: 10px 0px 10px 0px;
+
+  }
+
+  .left-sidebar .contact-info li img{
+  	padding-right: 15px;
   }
 
  .right-sidebar{
@@ -179,7 +195,10 @@ footer {
 	width: 100%;
 	text-align: center;
     padding-top: 50px;
- }
+    position: absolute;
+    bottom: 0px;
+
+}
 
 
 
