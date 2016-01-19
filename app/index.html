@@ -7,6 +7,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<title>This is a first project</title>
 	<!-- SEO -->
@@ -22,7 +23,7 @@
 		<header class="header">
 				<div class="content">
 					<div class="logo left">
-						<a href="#"><img src="img/loo.png" alt=""></a>
+						<a href="#"><img src="img/logo.png" alt=""></a>
 					</div>
 					<div class="icons right">
 						<ul>
@@ -68,7 +69,7 @@
 					<aside class="left-sidebar">
 						<div class="left-menu">
 							<ul>
-								<li><a href="#">Обо мне</a></li>
+								<li class="active"><a href="#">Обо мне</a></li>
 								<li><a href="#">Мои работы</a></li>
 								<li><a href="#">Связаться со мной</a></li>
 							</ul>
@@ -76,9 +77,9 @@
 						<div class="contact-info">
 							<h3>Контакты</h3>
 							<ul>
-								<li><img src="img/icon-email.png" alt="">mail@mail.ru</li>
-								<li><img src="img/icon-phone.png" alt="">+79812342323</li>
-								<li><img src="img/icon-skype.jpg" alt="">nickname</li>
+								<li class="email"><img src="img/icon-email.png" alt=""><a href="mailto:mail@mail.ru">mail@mail.ru</a></li>
+								<li class="phone"><img src="img/icon-phone.png" alt=""><a href="skype:+12345678?call">+79812342323</a></li>
+								<li class="skype"><img src="img/icon-skype.jpg" alt=""><a href="skype:SkypeUser?call">nickname</a></li>
 							</ul>
 						</div>
 					</aside>
@@ -90,15 +91,13 @@
 								<div class="img-wrap">
 									<img src="img/avatar.jpeg" alt="">
 								</div>
-								<h4>Меня зовут</h4>
-								<p>Василий Борзаница</p>
-								<h4>Мой возраст</h4>
-								<p>27 лет</p>
-								<h4>Мой город</h4>
-								<p>Киев, Украина</p>
-								<h4>Моя специализация</h4>
-								<p>Frontend разработчик</p>
-								<h4>Ключевые навыки</h4>
+								<ul>
+									<li><strong>Меня зовут:</strong> Василий Борзаница</li>
+									<li><strong>Мой возраст</strong> 27 лет</li>
+									<li><strong>Мой город</strong> Киев, Украина</li>
+									<li><strong>Моя специализация</strong></li>
+									<li><strongКлючевые навыки></strong></li>
+								</ul>
 								<img src="" alt="">
 							</div>
 						</div>
