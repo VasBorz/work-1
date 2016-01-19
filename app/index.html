@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<!-- Viewport -->
+	<meta name="viewport" content="width=1220, initial-scale=1">
+	<!-- CSS -->
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<title>This is a first project</title>
+	<!-- SEO -->
+	<meta name="description" content="This is my first project">
+	<meta name="keywords" content="project">
+	<meta name="author" content="Vasyl Borzianitsia">
 </head>
 <body>
+	<!-- [if lt IE 8]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif] -->
 	<div class="wraper">
-		<header>
+		<header class="header">
 				<div class="content">
 					<div class="logo left">
-						<a href="#"><img src="img/logo.png" alt=""></a>
+						<a href="#"><img src="img/loo.png" alt=""></a>
 					</div>
 					<div class="icons right">
 						<ul>
@@ -21,7 +31,7 @@
 									<span class="fa-stack fa-lg">
 	  									<i class="fa fa-circle fa-stack-2x"></i>
 	 									<i class="fa fa-vk fa-stack-1x fa-inverse"></i>
-									</span>
+									</span> 
 								</a>
 							</li>
 							<li>
@@ -54,9 +64,9 @@
 		</header>
 
 			<main>
-				<div class="container">
-					<div class="left-sidebar">
-					 	<div class="left-menu">
+				<div class="container clearfix">
+					<aside class="left-sidebar">
+						<div class="left-menu">
 							<ul>
 								<li><a href="#">Обо мне</a></li>
 								<li><a href="#">Мои работы</a></li>
@@ -71,7 +81,8 @@
 								<li><img src="img/icon-skype.jpg" alt="">nickname</li>
 							</ul>
 						</div>
-					</div>
+					</aside>
+
 					<div class="right-sidebar">
 						<div class="block first">
 							<h2>Основная информация</h2>
@@ -79,7 +90,6 @@
 								<div class="img-wrap">
 									<img src="img/avatar.jpeg" alt="">
 								</div>
-
 								<h4>Меня зовут</h4>
 								<p>Василий Борзаница</p>
 								<h4>Мой возраст</h4>
@@ -114,21 +124,22 @@
 								</div>
 								<div class="text-block">
 									<img src="img/icon-doc.png" alt="">
-									<h3>Курсы Loftschool.ru</h3>
+									<h3>Курсы </h3>
 									<p>Ноябрь 2014 - по настоящее время</p>
 								</div>
 						</div>
 					</div>
-					<div class="clear"></div>
+					<div class="clearfix"></div>
 				</div>
 			</main>
 
-			<footer>
+			<footer class="footer">
 				<div class="container">
 					<p>© 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
 				</div>
 			</footer>
 		</div>
+	<!-- JS -->
 	<script src="js/main.js"></script>
 </body>
 </html>
