@@ -1,16 +1,24 @@
 body{
 	background-color: #eff3f7;
 	background-image: url(../img/bg.png);
-	font-family: 'Arial Narrow', Arial, sans-serif;
+	font-family: 'fira_sansbook', 'Arial Narrow', Arial, sans-serif;
 	color: #4a545d;
 	min-height: 100%;
-	padding-bottom: 180px;
+	padding-bottom: 100px;
 	position: relative;
+	font-size: 15px;
 }
+
 html {
   	height: 100%;
   	position: relative;
 }
+
+ul{
+	padding-left: 0px;
+}
+
+
 .browsehappy{
 	height: 80px;
 	background: #3ba8c0;
@@ -24,15 +32,16 @@ html {
 	margin-bottom: 40px;
 	background: #eff3f7 url(../img/line.png) bottom no-repeat;
 }
+
 .clearfix:before,
 .clearfix:after{
 	content:" ";
 	display: table;
 }
+
 .clearfix:after{
 	clear:both;
 }
-
 
 .container{
 	margin: 0 auto;
@@ -46,13 +55,13 @@ html {
 }
 
 .img-wrap{
-		width: 140px;
-		height: 140px;
-		border: 4px solid #3ba8c0;
-		border-radius: 50%;
-		overflow: hidden;
-		float: left;
-		margin: 0px 20px 0px 50px;
+	width: 140px;
+	height: 140px;
+	border: 4px solid #3ba8c0;
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+	margin: 0px 20px 0px 50px;
 }
 
 .img-wrap img{
@@ -62,13 +71,18 @@ html {
 }
 
 .icons ul{
-	padding-top: 20px;
+	padding-top: 10px;
+	padding-left: 0px;
+	font-size: 20px;
 }
 
 .icons ul li {
 	list-style: none;
 	display: inline-block;
-	padding-left: 15px;
+	padding-left: 14px;
+}
+.icons ul li:first-child {
+	padding-left: 0px;
 }
 
 .icons ul li i{
@@ -79,6 +93,9 @@ html {
     color: #fbfcfd !important; 
 }
 
+.icons ul li a{
+	text-decoration: none;
+}
 .icons ul li a:hover i{
 	color: #3ba8c0;
 }
@@ -92,7 +109,7 @@ html {
 }
 
 .logo{
-	padding-top: 35px;	
+	padding-top: 30px;	
 }
 
 .left-sidebar {
@@ -105,13 +122,13 @@ html {
 	background-color: #eff3f7;
 }
 .left-menu ul{
-	padding: 0px 10px;
+	padding: 0px 14px;
 	margin-top: 0px;
 }
 
 .left-menu ul li a{
 	text-decoration: none;
-	font-size: 23px;
+	font-size: 21px;
 }
 
 .left-menu ul li a{
@@ -132,7 +149,7 @@ html {
 .left-menu ul li.active{
 	background-color: #3ba8c0;
 	color: #fbfcfd;
-	margin: 0 -10px;
+	margin: 0 -13px;
 	padding-left: 29px;
  }
 
@@ -156,25 +173,30 @@ html {
 
 .contact-info h3{
   	padding: 10px 0px 0px 20px;
+  	margin-bottom: 10px;
   }
 
 .contact-info ul{
+	margin-top: 0px;
   	list-style: none;
   	padding-left: 0px;
   }
 
 .contact-info li{
-  	padding: 12px 0px 8px 40px;
+  	padding: 12px 0px 11px 40px;
 
   }
   .contact-info li a{
   	text-decoration: none;
   	vertical-align: top;
   	color: #fbfcfd;
+  	word-break: break-all;
+  	margin-left: 10px;
+  	font-size: 17px;
 }
   .contact-info li a:hover{
   	border-bottom: solid 1px;
-  	padding-bottom: 3px;
+  	padding-bottom: 2px;
   	color: #fbfcfd;
 }
 
@@ -184,13 +206,13 @@ html {
   }
 
  .contact-info li.email{
- 	background-color: #41b9d4;
+ 	background: #41b9d4 url(../img/icon-email.png) 20px center no-repeat;
  }
   .contact-info li.phone{
- 	background-color: #48cbe8;
+  	background: #48cbe8 url(../img/icon-phone.png) 20px center no-repeat;
  }
  .contact-info li.skype{
- 	background-color: #51daf8;
+ 	background: #51daf8 url(../img/icon-skype.jpg) 20px center no-repeat;
  }
 
  .right-sidebar{
@@ -209,22 +231,25 @@ html {
 	color: #3ba8c0;
     font-weight: 300;
     border-bottom: 2px solid #3ba8c0;
-    padding: 0 20px 20px 20px;
-    margin: 0 0 20px 0;
+    padding: 0 20px 10px 20px;
+    margin: 0 0 10px 0;
     display: inline-block;
 }
+.block ul{
+	list-style: none;
+	padding-left: 40px;
+}
+.block ul li img{
+	float: left;
+}
 
-.text-block{
+.block{
 	margin-bottom: 20px;
 }
-.text-block h3{
+.block h3{
     font-size: 17px;
     font-weight: 300px;
-}
-
-.text-block img{
-    margin: 0 30px 30px 50px;
-    float: left;
+    margin-bottom: 0px;
 }
 
 .text-block.first {
@@ -236,23 +261,66 @@ html {
 
 }
 .text-block-first ul li{
-	line-height: 1.8;
+	line-height: 2.0;
 	
 }
 .text-block-first ul li strong{
 	font-size: 17px;
 	
 }
+
+.about-info{
+	padding-left: 60px;
+}
+
+.icon-work{
+	background: url(../img/icon-job.png) 0px center no-repeat;
+}
+
+.icon-study{
+	background: url(../img/icon-study.png) 0px center no-repeat;
+}
+
+.icon-doc{
+	background: url(../img/icon-doc.png) 10px center no-repeat;
+}
+
 .footer {
 	background: #eff3f7 url(../img/line.png) top no-repeat;
-	height: 80px;
 	display: inline-block;
 	width: 100%;
 	text-align: center;
-    padding-top: 50px;
+	padding: 11px 0px;
     position: absolute;
     bottom: 0px;
 
 }
+
+.footer .container{
+	 position: relative;
+}
+
+.footer-info{
+	display: inline-block;
+    width: 600px;
+}
+/*Lock in the footer made via sprite*/
+
+.sprite {
+    background-image: url(../img/lock.png);
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 25%;
+    width: 20px;
+    height: 32px;
+    background-position: -5px -5px;
+}
+
+.sprite:hover {
+    background-position: -35px -5px;
+}
+
 
 

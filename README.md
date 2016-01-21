@@ -3,4 +3,4 @@
 <p>2. cd work</p>
 <p>3. npm i</p>
 <p>4. bower i</p>
-<p>4. gulp</p>
+<p>5. gulp</p>
