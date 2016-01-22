@@ -19,6 +19,9 @@ ul{
 	margin: 0;
 	padding: 0;
 }
+img{
+	max-width: 100%;
+}
 
 
 .browsehappy{
@@ -167,7 +170,7 @@ ul{
 	margin-bottom: 20px;
 	background-color: #eff3f7;
 }
-.left-menu ul{
+/*.left-menu ul{
 	padding: 0px 14px;
 	margin-top: 0px;
 }
@@ -182,7 +185,7 @@ ul{
 	cursor: pointer;
 }
 
-.left-menu ul li {
+.left-menu ul{
 	list-style: none;
 	padding: 22px 0px 22px 19px;
 	border-bottom: 2px solid #3ba8c0;
@@ -192,17 +195,13 @@ ul{
 .left-menu ul li:last-child{
  	border:none;
  }
-
-.left-menu ul li.active{
+.left-menu .active a {
 	background-color: #3ba8c0;
-	color: #fbfcfd;
+	color: #fff;
 	margin: 0 -13px;
 	padding-left: 29px;
  }
 
-.left-menu ul li:first-child a{
- 	color: #fbfcfd;
- }
 
 .left-menu ul li a:hover{
   	color: #3ba8c0;
@@ -210,7 +209,40 @@ ul{
 
 .left-menu ul li:first-child a:hover{
   	color: #fbfcfd;
-  }
+  }*/
+
+.left-menu	ul{
+	list-style: none;
+}
+.left-menu a{
+	padding: 22px;
+	display: block;
+	border-bottom: 2px solid #3ba8c0;
+ }
+/* .left-menu ul li a:last-child{
+ 	border:none;
+ }*/
+ .left-menu a:hover{
+	color: #3ba8c0;
+	cursor: pointer;
+ }
+.left-menu	ul li a{
+	text-decoration: none;
+	color: #959aa8;
+	font-size: 21px;
+}
+.left-menu .active{
+	background-color: #3ba8c0;
+}
+.left-menu .active a{
+	color: #fff;
+	padding: 22px;
+	display: block;
+}
+.left-menu li:first-child a{
+	border-radius: 5px 0px 0px 5px;
+}
+
 
 .left-sidebar .contact-info{
   	background-color: #3ba8c0;
