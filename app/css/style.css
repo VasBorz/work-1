@@ -16,6 +16,8 @@ html {
 
 ul{
 	padding-left: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -71,34 +73,78 @@ ul{
 }
 
 .icons ul{
-	padding-top: 10px;
-	padding-left: 0px;
+	padding-top: 30px;
 	font-size: 20px;
 }
 
 .icons ul li {
 	list-style: none;
 	display: inline-block;
+	float: left;
+	margin: 7px 0px 0px 10px;
 	padding-left: 14px;
 }
 .icons ul li:first-child {
-	padding-left: 0px;
-}
-
-.icons ul li i{
-	color: #58697a;
-}
-
-.fa-inverse {
-    color: #fbfcfd !important; 
+	margin-left: 0px;
 }
 
 .icons ul li a{
 	text-decoration: none;
 }
-.icons ul li a:hover i{
-	color: #3ba8c0;
+.icon {
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    display: block;
 }
+
+.fb {
+    width: 47px;
+    height: 47px;
+    background-position: 0px -5px;
+}
+
+.fb:hover {
+    width: 47px;
+    height: 47px;
+    background-position: -57px -5px;
+}
+
+.git {
+    width: 47px;
+    height: 47px;
+    background-position: 0px -62px;
+}
+
+.git:hover {
+    width: 47px;
+    height: 47px;
+    background-position: -57px -62px;
+}
+
+.tw {
+    width: 47px;
+    height: 47px;
+    background-position: -114px -5px;
+}
+
+.tw:hover {
+    width: 47px;
+    height: 47px;
+    background-position: -114px -62px;
+}
+
+.vk {
+    width: 47px;
+    height: 47px;
+    background-position: 0px -119px;
+}
+
+.vk:hover {
+    width: 47px;
+    height: 47px;
+    background-position: -57px -119px;
+}
+
 
 .left{
 	float: left;
@@ -133,6 +179,7 @@ ul{
 
 .left-menu ul li a{
 	color: #959aa8;
+	cursor: pointer;
 }
 
 .left-menu ul li {
@@ -220,12 +267,6 @@ ul{
  	width: 68%;
  }
 
-.block{
-	background-color: #eff3f7;
-	margin-bottom: 30px;
-	padding: 20px 0 50px 0;
-	border-radius: 5px;
-}
 
 .right-sidebar h2{
 	color: #3ba8c0;
@@ -235,12 +276,49 @@ ul{
     margin: 0 0 10px 0;
     display: inline-block;
 }
+.block{
+	background-color: #eff3f7;
+	margin-bottom: 30px;
+	padding: 20px 0 50px 0;
+	border-radius: 5px;
+}
 .block ul{
 	list-style: none;
 	padding-left: 40px;
 }
-.block ul li img{
+.description{
+	display: inline-block;
+	max-width: 430px;
+}
+.block .skills{
+	padding-left: 0px;
+	word-break: break-all;
+	vertical-align: middle;
+}
+.block .skills li{
+	display: inline-block;
+	background: url(../img/skill.png) center center repeat-x;
+	color: #fff;
+	font-size: 14px;
 	float: left;
+	margin-right: 10px;
+	padding: 0 3px;
+
+}
+.block .skills li:before{
+	content: ' ';
+	background: url(../img/b-skill.png) no-repeat;
+	display: inline-block;
+	width: 3px;
+}
+.block .skills li:after{
+	content: ' ';
+	background: url(../img/a-skill.png) center no-repeat;
+	display: inline-block;
+	width: 3px;
+}
+.description ul{
+	padding-left: 20px;
 }
 
 .block{
@@ -258,6 +336,7 @@ ul{
 
 .text-block-first ul{
 	list-style: none;
+	display: inline-block;
 
 }
 .text-block-first ul li{
@@ -312,7 +391,7 @@ ul{
     display: block;
     position: absolute;
     left: 30px;
-    top: 25%;
+    top: 15%;
     width: 20px;
     height: 32px;
     background-position: -5px -5px;
