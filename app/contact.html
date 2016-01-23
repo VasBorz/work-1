@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/portfolio.css">
+		<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- JS -->
@@ -53,8 +54,8 @@
 						<div class="left-menu">
 							<ul>
 								<li><a href="index.html">Обо мне</a></li>
-								<li class="active"><a href="portfolio.html">Мои работы</a></li>
-								<li><a href="contact.html">Связаться со мной</a></li>
+								<li><a href="portfolio.html">Мои работы</a></li>
+								<li class="active"><a href="contact.html">Связаться со мной</a></li>
 							</ul>
 						</div>
 						<div class="contact-info">
@@ -73,61 +74,31 @@
 						</div>
 					</aside>
 					<div class="right-sidebar">
-						<div class="block clearfix">
-							<h2>Мои роботы</h2>
-							<div class="block clearfix">
-								<div class="project">
-									<div class="img">
-										<img src="img/projects/project1.jpg" alt="">
-										<div class="mask">
-											<a href="#">Подробнее</a>
-										</div>
-									</div>
-									<a href=""></a>
-									<p>Информация о проекте 1 превью 2 строки....</p>
+						<div class="contact">
+							<h3>У вас интересный проект? Напишите мне</h3>
+							<form action="POST">
+								<div class="formgroup">
+									<label for="name">Имя:</label>
+									<input id="name" class="input" type="text">
 								</div>
-								<div class="project">
-									<div class="img">
-										<img src="img/projects/project2.jpg" alt="">
-										<div class="mask">
-											<a href="#">Подробнее</a>
-										</div>
-									</div>
-									<a href=""></a>
-									<p>Информация о проекте 2 превью 2 строки....</p>
+								<div class="formgroup">
+									<label for="name">Email:</label>
+									<input id="email"type="text">
 								</div>
-								<div class="project">
-									<div class="img">
-										<img src="img/projects/project3.jpg" alt="">
-										<div class="mask">
-											<a href="#">Подробнее</a>
-										</div>
-									</div>
-									<a href=""></a>
-									<p>Информация о проекте 3 превью 2 строки....</p>
+								<div class="massege">
+									<label for="name">Сообщение:</label>
+									<textarea rows="8" cols="55"></textarea>
 								</div>
-								<div class="project">
-									<div class="img">
-										<img src="img/projects/project4.jpg" alt="">
-										<div class="mask">
-											<a href="#">Подробнее</a>
-										</div>
-									</div>
-									<a href=""></a>
-									<p>Информация о проекте 4 превью 2 строки....</p>
+								<div class="form-button">
+									<span>Введите код указанный на картинке</span>
+									<img src="img/captcha.jpg" alt="">
+									<input type="text">
+									<input type="submit">
+									<input type="reset" value="Очистить">
 								</div>
-								<div class="project">
-									<div class="img">
-										<img src="img/projects/project1.jpg" alt="">
-										<div class="mask">
-											<a href="#">Подробнее</a>
-										</div>
-									</div>
-									<a href=""></a>
-									<p>Информация о проекте 5 превью 2 строки....</p>
-								</div>
-							</div>
+							</form>
 						</div>
+					</div>
 						
 					</div>
 					<div class="clearfix"></div>

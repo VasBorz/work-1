@@ -1,0 +1,69 @@
+.contact{
+	background-color: #eff3f7;
+}
+.contact h3{
+	text-align: center;
+	background-color: #48cbe8;
+	color: #fff;
+	padding: 60px 0px;
+	border-bottom: solid 17px #67dffa; 
+	font-size: 27px;
+}
+
+form{
+	padding: 50px 125px;
+}
+input{
+		border-radius: 5px;
+}
+input:focus{
+	outline: none;
+}
+input,textarea{
+	border: solid 1px #48cbe8;
+}
+
+input[type="submit"]{
+	background-color: #48cbe8;
+	color: #fff;
+	border: none;
+	border-bottom: 3px solid #3ba8c0;
+}
+input[type="submit"]:active{
+	outline: none;
+	margin-top: 1px;
+	border: none;
+	border-bottom: 2px solid #48cbe8;
+}
+input[type="reset"]{
+	background-color: #849db5;
+	color: #fff;
+	border: none;
+	float: right;
+	border-bottom: 3px solid #687b8f;
+}
+input[type="reset"]:active{
+	outline: none;
+	margin-top: 1px;
+	border: none;
+	border-bottom: 2px solid #48cbe8;
+}
+.formgroup {
+	float: left;
+	width: 50%;
+	margin-bottom: 20px;
+	box-sizing:border-box;
+}
+
+.formgroup label{
+	display: block;
+}
+.formgroup input{
+	width: 100%;
+}
+.formgroup:first-child{
+	padding-right: 20px;
+}
+.formgroup:last-child{
+	padding-left: 20px;
+}
