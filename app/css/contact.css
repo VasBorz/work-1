@@ -61,7 +61,6 @@ input[type="reset"]:active{
     vertical-align: top;
     margin-top: 24px;
     margin-left: 15px;
-    float: right;
 }
 .formgroup {
 	float: left;
@@ -82,6 +81,9 @@ input[type="reset"]:active{
 	color: #48cbe8; 
 	font-size: 13px; 
 	padding:3px 0px 0px 8px;
+}
+.buttons-width{
+width: 100%;
 }
 .massege textarea::-webkit-input-placeholder {
 	color: #48cbe8; 

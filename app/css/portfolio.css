@@ -12,6 +12,9 @@
   margin-bottom: 10px;
 
 }
+.block .display{
+    display: inline-block;
+}
 .project a{
   text-decoration: none;
   color: #3ba8c0;
