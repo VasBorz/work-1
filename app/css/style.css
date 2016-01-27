@@ -286,6 +286,7 @@ border-radius: 5px;
 	margin-bottom: 30px;
 	padding: 20px 0 50px 0;
 	border-radius: 5px;
+	display: inline-block;
 }
 .block ul{
 	list-style: none;
@@ -326,9 +327,6 @@ border-radius: 5px;
 	padding-left: 20px;
 }
 
-.block{
-	margin-bottom: 20px;
-}
 .title-for-job{
     font-size: 17px;
     font-weight: 300px;

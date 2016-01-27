@@ -8,7 +8,17 @@
 .project .img{
 	border: solid 3px #3ba8c0;
 	border-radius: 5px;
+  height: 122px;
+  margin-bottom: 10px;
 
+}
+.project a{
+  text-decoration: none;
+  color: #3ba8c0;
+  font-style: italic;
+}
+.project p{
+  margin-top: 5px;
 }
 .img{
 	position: relative;
@@ -21,10 +31,17 @@
     bottom: 0;
     opacity: 0;
    	background-color: #3ba8c0;
-   	transition: all 0.2s linear;
+      -moz-opacity: 0;
+         opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: .25s all;
+       -moz-transition: .25s all;
+         -o-transition: .25s all;
+            transition: .25s all;
 }
 .mask:hover{
 	opacity: 0.7;
+  filter: alpha(opacity=70);
 }
 .mask a{
 	color: #fff;
