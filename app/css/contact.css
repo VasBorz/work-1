@@ -24,7 +24,7 @@ input,textarea{
 	outline: none;
 }
 
-input[type="submit"]{
+.button-submit{
 	background-color: #48cbe8;
 	color: #fff;
 	border: none;
@@ -34,12 +34,15 @@ input[type="submit"]{
 	margin-top: 20px;
 	float: left;
 }
-input[type="submit"]:active{
+.button-submit:hover{
+	background-color: #45bdd8;
+}
+.button-submit:active{
 	outline: none;
 	border: none;
 	top: 3px;
 }
-input[type="reset"]{
+.button-reset{
 	background-color: #849db5;
 	color: #fff;
 	border: none;
@@ -49,7 +52,11 @@ input[type="reset"]{
 	margin-top: 20px;
 	position: relative;
 }
-input[type="reset"]:active{
+.button-reset:hover{
+	background-color: #8ea9c2;
+}
+
+.button-reset:active{
 	outline: none;
 	border: none;
 	top: 3px;

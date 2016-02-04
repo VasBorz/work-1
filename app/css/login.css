@@ -20,36 +20,55 @@
 .form-login{
 	padding-top: 10px;
 }
+
 .form-login, .form-login label{
 	display: block;
 	text-align: center;
 }
+
 .form-login label{
 	font-size: 36px;
 	color: #959aa8;
 	font-family: 'fira_sanslight', 'Arial Narrow', Arial, sans-serif;
 }
-.form-login input{
-	color: #48cbe8;
+
+.form-login-input{
 	font-size: 17px;
-	padding: 17px 0px 20px 10px;
+	padding: 15px 0px 20px 10px;
 	margin-bottom: 20px;
 	width: 425px;
 	font-family: 'fira_sanslight', 'Arial Narrow', Arial, sans-serif;
 }
-input[type="submit"].enter{
+.form-login-input::-webkit-input-placeholder { 
+	color: #48cbe8; 
+	font-size: 17px; 
+	padding:3px 0px 0px 8px;
+}
+
+.form-login-input:focus::-webkit-input-placeholder { 
+	color:transparent;
+}
+
+.enter{
 	color: #fff;
+	background-color: #48cbe8;
 	font-size: 36px;
 	float: none;
 	padding: 8px 20px;
+	margin: 20px auto 30px auto;
 	width: auto;
 	display: block;
-	margin: auto;
-	margin: 20px auto 30px auto;
+    border: none;
+    border-bottom: 3px solid #3ba8c0;
 }
-
-input[type="submit"].enter:active{
+.enter:hover{
+	background-color: #45bdd8;
+}
+.enter:active{
 	margin-top: 23px;
+	outline: none;
+	border: none;
+	top: 3px;
 }
 
 .title2{
