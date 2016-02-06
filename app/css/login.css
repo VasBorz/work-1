@@ -48,6 +48,10 @@
 .form-login-input:focus::-webkit-input-placeholder { 
 	color:transparent;
 }
+.enter-center{
+	width: 100%;
+	text-align: center;
+}
 
 .enter{
 	color: #fff;
@@ -55,9 +59,10 @@
 	font-size: 36px;
 	float: none;
 	padding: 8px 20px;
+	margin: auto; 
 	margin: 20px auto 30px auto;
 	width: auto;
-	display: block;
+	display: inline-block;
     border: none;
     border-bottom: 3px solid #3ba8c0;
 }
