@@ -8,7 +8,10 @@
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/portfolio.css">
+	<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/addproject.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- JS -->
 	<script src="bower/modernizr/modernizr.js"></script>
@@ -134,9 +137,43 @@
 										</div>
 									</a>
 								</div>
+
 							</div>
+
 						</div>
-						
+
+						<!-- Here will be Popup -->
+						<div class="add-poject-popup clearfix">
+							<div class="add-progect-head">
+								<h2 class="add-progect-title">Добавление проекта</h2>
+								<img src="img/projects/close.png" height="25" width="25" alt="Close the window" class="close-image b-close">
+							</div>
+							<form action="POST" class="form-add-project">
+							<div class="formgroup2">
+								<label for="name">Название проекта:</label>
+								<input id="name" type="text" placeholder="Введите название" class="add-poject-input">
+							</div>
+							<div class="formgroup2 add-image">
+								<label for="image">Картинка проекта:</label>
+								<input class"image2" id="image" type="text" placeholder="Загрузить изображение" class="add-poject-input">
+								<input type="file" class="input-image" accept="image/jpeg,image/png">
+							</div>
+							<div class="formgroup2">
+								<label for="url">URL проекта:</label>
+								<input id="url" type="text" placeholder="Добавьте ссылку" class="add-poject-input">	
+							</div> 
+							<div class="formgroup2">
+								<label for="massege">Описание проекта:</label>
+								<textarea id="massege" rows="5" placeholder="Пара слов о Вашем проетке" class="add-poject-input"></textarea> 
+							</div>
+							<div class="formgroup2 clearfix center">
+								<input type="submit" value="Добавить" class="button-submit button-project">
+							</div>
+
+							</form>
+						</div>
+							
+								
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -155,6 +192,7 @@
 		</div>
 	<!-- JS -->
 	<script src="bower/jquery/jquery.min.js"></script>
+	<script src="bower/bPopup/jquery.bpopup.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/module.js"></script>
 </html>

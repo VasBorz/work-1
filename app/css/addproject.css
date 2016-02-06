@@ -1,0 +1,76 @@
+.add-poject-popup{
+	width: 365px;
+	background-color: #eff3f7; 
+	display: none;
+}
+.close-image{
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	cursor: pointer;
+}
+
+.add-progect-head{
+	background-color: #48cbe8; 
+	color: #fff;
+	border-bottom: solid 10px #67dffa;
+	position: relative;
+	border-radius: 4px 4px 0px 0px;
+}
+.add-progect-title{
+	margin: 0px;
+    padding: 8px 0px 8px 10px;
+}
+.add-poject-input{
+	width: 100%;
+	max-width: 310px;
+	padding: 8px 0px 7px 10px;
+	color: #48cbe8;
+}
+.add-poject-input::-webkit-input-placeholder {
+	color: #48cbe8;
+}
+.add-poject-input:focus::-webkit-input-placeholder {
+	color:transparent;
+}
+.add-poject-input::-webkit-textarea-placeholder {
+	color: #48cbe8;
+}
+.add-image{
+	position: relative;
+	background: url(../img/projects/upload.png) 290px 42px no-repeat;
+}
+.input-image{
+	position: absolute;
+	right: 22px;
+	width: 40px;
+	height: 46px;
+	opacity: 0;
+
+}
+.formgroup2 textarea{
+	border-radius: 4px;	
+}
+input[id="image"]{
+	width: 265px;
+	border-radius: 4px 0px 0px 4px;
+}
+.form-add-project{
+	width: 100%;
+}
+.formgroup2{
+	padding: 15px 0px 0px 20px;
+}
+.formgroup2 label{
+	display: block;
+	color: #959aa8;
+	font-size: 17px;
+}
+.button-project{
+	text-align: center;
+	margin: 0px 0px 20px 0px;
+	float: none; 
+}
+.center{
+	text-align: center;
+}
