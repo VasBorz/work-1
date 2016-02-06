@@ -9,7 +9,7 @@ var myModule = (function () {
 	// Прослушивает события 
 	_setUpListener = function(){
 		$('.add-project').on('click', _showmodal); // Запуск модального окна
-		$('.form-add-project').on('submit', _addProject); // Добавление проекта
+		$('.form-add-project').live('submit', _addProject); // Добавление проекта
 	},
 
 	// Функция вызова модального окна
@@ -23,7 +23,29 @@ var myModule = (function () {
 
 	_addProject = function(e){
 		e.preventDefault();
-		console.log('Добавление проекта');
+		var form = $(this),
+			url = '../add_project.php',
+			data = form.serialize();
+
+		console.log(this);
+		console.log(data);
+
+		$.ajax({
+			url: url,
+			type: 'POST',
+			dataType: 'json',
+			data: data,
+		})
+		.done(function(ans) {
+			console.log("success");
+			console.log(ans);
+			console.log(data.mess);
+
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		
 	};
 	
 	// Возращает обект к которому можно обращатся
