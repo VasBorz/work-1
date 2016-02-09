@@ -1,4 +1,4 @@
-//Создание своего модуля
+//Создание модуля для попап
 var myModule = (function () {
 
 	// Иницилизация модуля
@@ -15,31 +15,41 @@ var myModule = (function () {
 	// Функция вызова модального окна
 	_showmodal = function (e) {
 		e.preventDefault();
-		$('.add-poject-popup').bPopup({
+			$('.add-poject-popup').bPopup({
 			speed : 500,
-			transition : 'slideDown'
+			transition : 'slideDown',
+			onClose : function () { // очищает форму при ее закрытии
+				$('.alert-fine, .alert-error').hide();
+				$('.form-add-project')[0].reset();
+			}
 		});
 	},
-
+	// Функция добавление проекта
 	_addProject = function(e){
 		e.preventDefault();
 		var form = $(this),
 			url = '../add_project.php',
 			data = form.serialize();
 
-		console.log(this);
-		console.log(data);
-
 		$.ajax({
 			url: url,
 			type: 'POST',
 			dataType: 'json',
-			data: data,
+			data: data
 		})
 		.done(function(ans) {
-			console.log("success");
-			console.log(ans);
-			console.log(data.mess);
+			var ansFine = $('.alert-fine'),
+				ansError = $('.alert-error');
+
+			if (ans.mess === 'OK') {
+				console.log(ans);
+				ansFine.show();
+				ansError.hide();
+			}else{
+				console.log(ans);
+				ansError.show();
+				ansFine.hide();
+			};
 
 		})
 		.fail(function() {
