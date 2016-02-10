@@ -65,4 +65,11 @@ var myModule = (function () {
 }) ();
 
 //Визов самого модуля
-myModule.init();
+if ($('.add-project').length) {
+	myModule.init();
+}
+
+
+
+
+

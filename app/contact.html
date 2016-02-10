@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/portfolio.css">
 		<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- JS -->
 	<script src="bower/modernizr/modernizr.js"></script>
@@ -77,23 +78,23 @@
 					<div class="right-sidebar">
 						<div class="contact clearfix">
 							<h3 class="title">У вас интересный проект? Напишите мне</h3>
-							<form action="POST" class="contact-form">
+							<form class="contact-form" id="contact-form">
 								<div class="formgroup">
 									<label for="name">Имя:</label>
-									<input id="name" class="input" type="text" placeholder="Как к Вам обращаться">
+									<input id="name" class="input" type="text" placeholder="Как к Вам обращаться" qtip-content="Вы не ввели имя">
 								</div>
 								<div class="formgroup">
 									<label for="email">Email:</label>
-									<input id="email" type="text" placeholder="Куда мне писать">
+									<input id="email" type="text" placeholder="Куда мне писать" qtip-content="Вы не ввели емейл" qtip-position="right">
 								</div>
-								<div class="massege">
-									<label for="massege">Сообщение:</label>
-									<textarea id="massege" rows="8" cols="48" placeholder="Кратко в чем суть"></textarea>
+								<div class="massage">
+									<label for="massage">Сообщение:</label>
+									<textarea id="massage" rows="8" cols="48" placeholder="Кратко в чем суть" qtip-content="Введите Ваше сообщение пожалуйста"></textarea>
 								</div>
 								<div class="form-button clearfix">
 									<span>Введите код указанный на картинке</span>
 									<img src="img/captcha.jpg" alt="This is captcha" class="display">
-									<input class="code" type="text" placeholder="Введите код">
+									<input class="code" type="text" placeholder="Введите код" qtip-content="Вы не ввели код" qtip-position="right">
 									<div class="buttons-width">
 										<input type="submit" value="Отправить" class="button-submit">
 										<input type="reset" value="Очистить" class="button-reset">
@@ -119,5 +120,12 @@
 			</footer>
 		</div>
 	<!-- JS -->
-	<script src="js/main.js"></script>
+	<script src="bower/jquery/jquery.js"></script>
+	<script src="bower/qtip2/jquery.qtip.js"></script>
+	<script src="js/validation.js"></script>
+	<script src="js/contact.js"></script>
 </html>
+
+
+
+
