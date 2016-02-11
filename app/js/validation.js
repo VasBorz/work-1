@@ -2,19 +2,42 @@
 var validation = (function (){
 
 	var init = function (){
-
+  	  console.log('Инициализация модуля validation');
+      _setUpListeners();
 	};
 
 	//Прослушка событий
-	var _setUpListener = function(){
+	var _setUpListeners = function(){
 	  $('form').on('keydown', '.has-error', _removeError); // удаляем красную обводку у элементов форм
       $('form').on('click', '.has-error', _removeError); // удаляем красную обводку у элементов форм
       $('form').on('reset', _clearForm); // при сбросе формы удаляем также: тултипы, обводку, сообщение от сервера
 	};
 
+
+	var _removeError = function() { // Убирает красную обводку у элементов форм
+
+      console.log('Красная обводка у элементов форм удалена');
+	  $(this).removeClass('has-error');
+    };
+
+    var _addError = function(element) {
+
+	    element.addClass('has-error');
+	    _createQtip(element, element.attr('qtip-position')); // Cоздает клас (.has-error) с отображением тултипа
+	};
+
+	var _clearForm = function(e) { // Очищает форму
+
+	    console.log('Очищаем форму');
+
+	    var form = $(this);
+	    form.find('input, textarea').trigger('hideTooltip'); // удаляем тултипы
+	    form.find('.has-error').removeClass('has-error'); // удаляем красную подсветку
+
+    };
+
 	//Создание тултипов
 	 _createQtip = function(element, position) { 
-      console.log('Создаем тултип');
 
       // позиция тултипа (left, right)
       if (position === 'right') {
@@ -47,10 +70,10 @@ var validation = (function (){
         },
         position: position,
         style: {
-          classes: 'qtip-mystyle qtip-rounded',
+          classes: 'qtip-mystyle qtip-rounded qtip-red',
           tip: {
-            height: 10,
-            width: 10
+            height: 8,
+            width: 8
           }
         }
       }).trigger('show');
@@ -59,8 +82,8 @@ var validation = (function (){
 
   	var validateForm = function(form) { // Проверяет, чтобы все поля формы были не пустыми. Если пустые - вызывает тултипы
 
-	    var 
-	        elements = form.find('input, textarea'),
+	    var self = this,
+	        elements = form.find('input, textarea').not('input[type="hidden"], input[name="filename"]'),
 	        valid = true;
 
 	    $.each( elements, function(index, element) {
@@ -78,31 +101,10 @@ var validation = (function (){
 	      return valid;
     };
 
-    var _removeError = function() { // Убирает красную обводку у элементов форм
-
-      console.log('Красная обводка у элементов форм удалена');
-	  $(this).removeClass('has-error');
-    };
-
-   var _addError = function(element) {
-
-	      element.addClass('has-error');
-	      _createQtip(element, element.attr('qtip-position')); // Cоздает клас (.has-error) с отображением тултипа
-	};
-
-    var _clearForm = function(e) { // Очищает форму
-
-	    console.log('Очищаем форму');
-
-	    var form = $(this);
-	    form.find('.inputfield').trigger('hideTooltip'); // удаляем тултипы
-	    form.find('.has-error').removeClass('has-error'); // удаляем красную подсветку
-
-    };
-
 	return {
 		init : init,
 		validateForm : validateForm
 	}
 
 })();
+validation.init();

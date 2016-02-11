@@ -408,5 +408,13 @@ border-radius: 5px;
     background-position: -35px -5px;
 }
 
+.qtip-content{
+	font-size: 14px;
+	color: #fff;
+	padding: 8px !important;
+}
 
-
+.has-error {
+    background-color: #fad2d1;
+    border-color: #f97e76;
+}
