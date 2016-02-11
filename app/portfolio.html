@@ -160,20 +160,20 @@
 							<form action="POST" class="form-add-project" role="form" id="form2">
 							<div class="formgroup2">
 								<label for="name">Название проекта:</label>
-								<input id="name" type="text" name="name" placeholder="Введите название" class="add-poject-input">
+								<input id="name" type="text" name="name" placeholder="Введите название" class="add-poject-input" qtip-content="Вы не ввели название проекта">
 							</div>
 							<div class="formgroup2 add-image">
 								<label for="file">Картинка проекта:</label>
-								<input id="image" name="file" type="text" placeholder="Загрузить изображение" class="add-poject-input">
-								<input type="file" id="file" name="file" class="input-image" accept="image/jpeg,image/png">
+								<input id="image" name="file" type="text" placeholder="Загрузить изображение" class="add-poject-input" qtip-content="Вы не подкрепили картинку"> 
+								<input type="file" id="file" name="filename" class="input-image" accept="image/jpeg,image/png">
 							</div>
 							<div class="formgroup2">
 								<label for="url">URL проекта:</label>
-								<input id="url" type="text" name="url" placeholder="Добавьте ссылку" class="add-poject-input">	
+								<input id="url" type="text" name="url" placeholder="Добавьте ссылку" class="add-poject-input" qtip-content="Вы не ввели URL проекта">	
 							</div> 
 							<div class="formgroup2">
 								<label for="massege">Описание проекта:</label>
-								<textarea id="massege" name="massege" rows="5" placeholder="Пара слов о Вашем проетке" class="add-poject-input"></textarea> 
+								<textarea id="massege" name="massege" rows="5" placeholder="Пара слов о Вашем проетке" class="add-poject-input" qtip-content="Вы не ввели cообщение проекта"></textarea> 
 							</div>
 							<div class="formgroup2 clearfix center">
 								<input type="submit" value="Добавить" class="button-submit button-project">

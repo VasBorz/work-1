@@ -17,6 +17,7 @@ var myModule = (function () {
 		e.preventDefault();
 			$('.add-poject-popup').bPopup({
 			speed : 500,
+			positionStyle: 'fixed',
 			transition : 'slideDown',
 			onClose : function () { // очищает форму при ее закрытии
 				$('.alert-fine, .alert-error').hide();
@@ -27,16 +28,19 @@ var myModule = (function () {
 	// Функция добавление проекта
 	_addProject = function(e){
 		e.preventDefault();
+
 		var form = $(this),
 			url = '../add_project.php',
 			data = form.serialize();
-
-		$.ajax({
+  		
+  		if (!validation.validateForm(form)) return false; // Возвращает false, если не проходит валидацию
+		ajax = $.ajax({
 			url: url,
 			type: 'POST',
 			dataType: 'json',
 			data: data
 		})
+
 		.done(function(ans) {
 			var ansFine = $('.alert-fine'),
 				ansError = $('.alert-error');
@@ -55,7 +59,7 @@ var myModule = (function () {
 		.fail(function() {
 			console.log("error");
 		})
-		
+  
 	};
 	
 	// Возращает обект к которому можно обращатся
@@ -68,8 +72,5 @@ var myModule = (function () {
 if ($('.add-project').length) {
 	myModule.init();
 }
-
-
-
 
 

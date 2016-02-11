@@ -7,7 +7,7 @@
       addListener();
 
   function addListener() {
-    $('#contact-form').on('submit', submitForm);
+    $('#contact-form, #form-login').on('submit', submitForm);
   }
 
   function submitForm(e) {
