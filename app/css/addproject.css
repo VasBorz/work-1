@@ -26,6 +26,7 @@
 	max-width: 310px;
 	padding: 8px 0px 7px 10px;
 	color: #48cbe8;
+	color: #999\9;
 }
 .add-poject-input::-webkit-input-placeholder {
 	color: #48cbe8;
@@ -33,7 +34,14 @@
 .add-poject-input:focus::-webkit-input-placeholder {
 	color:transparent;
 }
+.add-poject-input=[disabled]:-webkit-input-placeholder {
+	color: #fff;
+}
+
 .add-poject-input::-webkit-textarea-placeholder {
+	color: #48cbe8;
+}
+.add-poject-input-image::-webkit-input-placeholder{
 	color: #48cbe8;
 }
 .add-image{
@@ -43,9 +51,12 @@
 .input-image{
 	position: absolute;
 	right: 22px;
-	width: 40px;
+	width: 300px;
+	width: 80px\9;
 	height: 46px;
 	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
 
 }
 .formgroup2 textarea{
@@ -92,3 +103,6 @@ input[id="image"]{
 	border-radius: 4px;
 	display: none;
 }
+
+
+

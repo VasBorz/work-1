@@ -8,16 +8,26 @@ var validation = (function (){
 
 	//Прослушка событий
 	var _setUpListeners = function(){
-	  $('form').on('keydown', '.has-error', _removeError); // удаляем красную обводку у элементов форм
-      $('form').on('click', '.has-error', _removeError); // удаляем красную обводку у элементов форм
-      $('form').on('reset', _clearForm); // при сбросе формы удаляем также: тултипы, обводку, сообщение от сервера
+
+	  $('form').on('keydown', '.has-error', _removeClass); // удаляем красную обводку у элементов форм
+    $('form').on('click', '.has-error', _removeClass); // удаляем красную обводку у элементов форм
+    $('form').on('reset', _clearForm); // при сбросе формы удаляем также: тултипы, обводку, сообщение от сервера
+    $('input, textarea').placeholder();
+    
+    // Єсли инпут существует он его сбрасует 
+    if ( $('#image').length>0) {
+      $('#image').prop( "disabled", true );
+    }
+  
 	};
 
 
-	var _removeError = function() { // Убирает красную обводку у элементов форм
+	var _removeClass = function() { // Убирает красную обводку у элементов форм
 
-      console.log('Красная обводка у элементов форм удалена');
+    console.log('Красная обводка у элементов форм удалена');
 	  $(this).removeClass('has-error');
+    $(this).removeClass('placeholder');
+
     };
 
     var _addError = function(element) {
@@ -107,4 +117,6 @@ var validation = (function (){
 	}
 
 })();
-validation.init();
+if ($('form').length > 0) {
+  validation.init();
+};
