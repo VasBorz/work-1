@@ -27,11 +27,11 @@
 	<div class="wraper wraper-table">
 		<div class="login">
 			<h3 class="title2">Авторизируйтесь</h3>
-			<form action="post" class="form-login">
+			<form action="post" class="form-login" id="form-login">
 				<label for="name">Логин:</label>
-				<input type="text" class="form-login-input" placeholder="Введите логин">
+				<input type="text" class="form-login-input" qtip-position="right" placeholder="Введите логин" qtip-content="Вы не ввели логин" >
 				<label for="name">Пароль:</label>
-				<input type="text" class="form-login-input" placeholder="Введите пароль">
+				<input type="text" class="form-login-input" placeholder="Введите пароль" qtip-content="Вы не ввели пароль" >
 				<div class="enter-center">
 					<input type="submit" value="Войти" class="enter">
 				</div>
@@ -47,5 +47,9 @@
 		</footer>
 	</div>
 	<!-- JS -->
-	<script src="js/main.js"></script>
+	<script src="bower/jquery/jquery.js"></script>
+	<script src="bower/qtip2/jquery.qtip.js"></script>
+	<script src="js/validation.js"></script>
+	<script src="js/contact.js"></script>
+
 </html>

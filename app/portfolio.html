@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="css/addproject.css">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- JS -->
 	<script src="bower/modernizr/modernizr.js"></script>
@@ -148,23 +149,31 @@
 								<h2 class="add-progect-title">Добавление проекта</h2>
 								<img src="img/projects/close.png" height="25" width="25" alt="Close the window" class="close-image b-close">
 							</div>
-							<form action="POST" class="form-add-project">
+							<div class="alert-error">
+								<p>ОЩИБКА!</p>
+								<p>Невозможно добавить проект.</p>
+							</div>
+							<div class="alert-fine">
+								<p>УРА!</p>
+								<p>Проект успешно добавлен.</p>
+							</div>
+							<form action="POST" class="form-add-project" role="form" id="form2">
 							<div class="formgroup2">
 								<label for="name">Название проекта:</label>
-								<input id="name" type="text" placeholder="Введите название" class="add-poject-input">
+								<input id="name" type="text" name="name" placeholder="Введите название" class="add-poject-input" qtip-content="Вы не ввели название проекта">
 							</div>
 							<div class="formgroup2 add-image">
-								<label for="image">Картинка проекта:</label>
-								<input class"image2" id="image" type="text" placeholder="Загрузить изображение" class="add-poject-input">
-								<input type="file" class="input-image" accept="image/jpeg,image/png">
+								<label for="file">Картинка проекта:</label>
+								<input id="image" name="file" type="text" placeholder="Загрузить изображение" class="add-poject-input add-poject-input-image" qtip-content="Вы не подкрепили картинку"> 
+								<input type="file" id="file" name="filename" class="input-image" accept="image/jpeg,image/png">
 							</div>
 							<div class="formgroup2">
 								<label for="url">URL проекта:</label>
-								<input id="url" type="text" placeholder="Добавьте ссылку" class="add-poject-input">	
+								<input id="url" type="text" name="url" placeholder="Добавьте ссылку" class="add-poject-input" qtip-content="Вы не ввели URL проекта">	
 							</div> 
 							<div class="formgroup2">
 								<label for="massege">Описание проекта:</label>
-								<textarea id="massege" rows="5" placeholder="Пара слов о Вашем проетке" class="add-poject-input"></textarea> 
+								<textarea id="massege" name="massege" rows="5" placeholder="Пара слов о Вашем проетке" class="add-poject-input" qtip-content="Вы не ввели cообщение проекта"></textarea> 
 							</div>
 							<div class="formgroup2 clearfix center">
 								<input type="submit" value="Добавить" class="button-submit button-project">
@@ -191,8 +200,19 @@
 			</footer>
 		</div>
 	<!-- JS -->
+	<script>
+
+	</script>
 	<script src="bower/jquery/jquery.min.js"></script>
+	<script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
+	<script src="bower/qtip2/jquery.qtip.js"></script>
 	<script src="bower/bPopup/jquery.bpopup.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/module.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/contact.js"></script>
+	<script src="js/validation.js"></script>
 </html>
+
+
+
+
+
