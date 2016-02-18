@@ -21,7 +21,8 @@ var myModule = (function () {
 			transition : 'slideDown',
 			onClose : function () { // очищает форму при ее закрытии
 				$('.alert-fine, .alert-error').hide();
-				$('.form-add-project')[0].reset();
+				document.getElementById('form2').reset();
+				$('input, textarea').placeholder();
 			}
 		});
 	},
